@@ -2,7 +2,6 @@
 
 body {
   font-family: "Roboto", sans-serif;
-  font-size: 1em;
 }
 
 /*-------------------------*/
@@ -28,70 +27,35 @@ body {
 
 /*-------------------------*/
 
-/*Conteudo Texto*/
+/*Principal*/
 
-.paragrafo-container {
-  width: 70%;
-  margin: 0 auto;
+.principal {
+  width: 90%;
+  margin: 120px auto 30px;
+  text-align: justify;
 }
-
-.imagem-principal {
-  width: 100px;
-    float: left;
-    padding: 0 15px;
-}
-
-.paragrafo {
-  margin: 20px auto;
-  font-size: 1.125em;
-  line-height: 1.5;
-}
-
-.destaque {
-  font-weight: bold;
-  color: #5b3c88;
-}
-
-.text-link {
-  cursor: pointer;
-}
-
-.destaque-italic {
-  font-style: italic;
-}
-
-/*-------------------------*/
-
-/*Rodapé*/
-
-.caixa-footer {
-  text-align: center;
-  background-color: #d8d8d8;
-  margin: 100px 0 0 0;
-  padding: 10px 0 10px;
-  width: 100%;
-  background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
-}
-
-.texto-footer {
-  margin: 10px auto;
-  font-weight: bold;
-  font-style: italic;
-  font-size: 14px;
-  color: #5b3c88;
-}
-
-.logo-footer {
-  width: 50px;
-}
-
-/*-------------------------*/
-
-/*seleção de links*/
 
 .principal-inicial {
   width: 90%;
   margin: 30px auto;
+  text-align: justify;
+}
+
+.principal-clientes {
+  width: 90%;
+  margin: 30px auto;
+  text-align: justify;
+}
+
+.principal-projetos {
+  width: 90%;
+  margin: 30px auto 0;
+  text-align: justify;
+}
+
+.principal-contato {
+  width: 90%;
+  margin: 0 auto 30px;
   text-align: justify;
 }
 
@@ -114,11 +78,39 @@ body {
   margin-top: 40px;
 }
 
-.principal {
-  width: 90%;
-  margin: 120px auto 30px;
-  text-align: justify;
+/*Conteudo Texto*/
+
+.paragrafo-container {
+  width: 70%;
+  margin: 0 auto;
 }
+
+.imagem-principal {
+  width: 100px;
+  float: left;
+  padding: 0 15px;
+}
+
+.paragrafo {
+  margin: 20px auto;
+  font-size: 18px;
+  line-height: 1.5;
+}
+
+.destaque {
+  font-weight: bold;
+  color: #5b3c88;
+}
+
+.text-link {
+  cursor: pointer;
+}
+
+.destaque-italic {
+  font-style: italic;
+}
+
+/*-------------------------*/
 
 .links-homepage {
   display: block;
@@ -127,7 +119,7 @@ body {
   text-align: center;
   font-size: 16px;
   padding: 25px 15px;
-  margin: 30px auto;
+  margin: 15px auto;
   line-height: 1.3;
   text-decoration: none;
   color: #ffffff;
@@ -135,9 +127,8 @@ body {
   border: solid 1px;
   border-radius: 10px;
   box-shadow: inset 0 0 10px #ffffff;
-  width: 350px
-  
-  ;
+  width: 350px;
+  text-transform: uppercase;
 }
 
 .links-homepage:hover {
@@ -146,7 +137,51 @@ body {
   color: #5b3c88;
 }
 
-/*-------------------------*/
+.tooltip-container {
+  position: relative;
+  display: block;
+  text-align: center;
+  width: 100%;
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip span {
+  max-width: 300px;
+  text-align: center;
+  visibility: hidden;
+  opacity: 0;
+  position: absolute;
+  bottom: 95%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #000;
+  color: #fff;
+  padding: 6px;
+  border-radius: 4px;
+  transition: opacity 0.3s, visibility 0.3s;
+}
+
+.tooltip:hover span {
+  visibility: visible;
+  opacity: 1;
+}
+
+.tooltip span::before {
+  content: "";
+  position: absolute;
+  left: 45%;
+  bottom: -5px;
+  width: 18px;
+  height: 18px;
+  transform: rotateZ(45deg);
+  background-color: #000;
+  border: 0px solid #000;
+  z-index: -1;
+}
 
 /*Contato*/
 
@@ -161,6 +196,33 @@ body {
 }
 
 .logo-contato {
+  width: 50px;
+}
+
+/*-------------------------*/
+
+/*-------------------------*/
+
+/*Rodapé*/
+
+.caixa-footer {
+  text-align: center;
+  background-color: #d8d8d8;
+  margin: 50px 0 0 0;
+  padding: 10px 0 10px;
+  width: 100%;
+  background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
+}
+
+.texto-footer {
+  margin: 10px auto;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 14px;
+  color: #5b3c88;
+}
+
+.logo-footer {
   width: 50px;
 }
 
@@ -181,8 +243,8 @@ body {
     margin-top: 130px;
   }
 
-  .links-homepage {
-    width: 80%;
+  .paragrafo-container {
+    width: 90%;
   }
 }
 
@@ -191,6 +253,14 @@ body {
 @media screen and (max-width: 480px) {
   .principal {
     margin-top: 170px;
+  }
+
+  .tooltip {
+    width: 100%;
+  }
+
+  .links-homepage {
+    width: 80%;
   }
 }
 
