@@ -16,16 +16,6 @@ body {
   text-align: center;
 }
 
-.caixa {
-  background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
-  width: 100%;
-  height: auto;
-  text-align: center;
-  position: fixed;
-  top: 0;
-  transition: top 0.8s;
-}
-
 .titulo-principal {
   padding: 40px 10px;
   font-weight: bold;
@@ -36,51 +26,20 @@ body {
   line-height: 1.4;
 }
 
-.botao-home {
-  width: 30px;
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  top: 10px;
-  transition: all 0.8s;
-}
-
-.btn-container {
-  width: 30px;
-  cursor: pointer;
-  position: fixed;
-  right: 20px;
-  top: 50px;
-  transition: all 0.8s;
-}
-
-.btn-container button {
-  height: 15px;
-  font-size: 10px;
-  cursor: pointer;
-  width: 30px;
-  padding: 0;
-  color: #ffffff;
-  border: 1px solid #bda8e0;
-  border-radius: 5px;
-  background-color: #5b3c88;
-  box-shadow: inset 0 0 2px #ffffff;
-}
-
-#decrease-font {
-  transition: all 0.5s;
-  cursor: zoom-out;
-}
-
-#increase-font {
-  transition: all 0.5s;
-  cursor: zoom-in;
-  margin-bottom: 10px;
-}
-
 /*-------------------------*/
 
 /*Conteudo Texto*/
+
+.paragrafo-container {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.imagem-principal {
+  width: 100px;
+    float: left;
+    padding: 0 15px;
+}
 
 .paragrafo {
   margin: 20px auto;
@@ -101,16 +60,6 @@ body {
   font-style: italic;
 }
 
-.paragrafo-gravura {
-  text-align: center;
-}
-
-.gravuras {
-  width: 300px;
-  display: inline-block;
-  margin: 10px auto;
-}
-
 /*-------------------------*/
 
 /*Rodapé*/
@@ -118,7 +67,7 @@ body {
 .caixa-footer {
   text-align: center;
   background-color: #d8d8d8;
-  margin: 10px 0 0 0;
+  margin: 100px 0 0 0;
   padding: 10px 0 10px;
   width: 100%;
   background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
@@ -134,12 +83,11 @@ body {
 
 .logo-footer {
   width: 50px;
-  margin-top: 30px;
 }
 
 /*-------------------------*/
 
-/*Seleção de esboços*/
+/*seleção de links*/
 
 .principal-inicial {
   width: 90%;
@@ -172,14 +120,14 @@ body {
   text-align: justify;
 }
 
-.esbocos {
+.links-homepage {
   display: block;
   background: #5b3c88;
   position: relative;
   text-align: center;
   font-size: 16px;
   padding: 25px 15px;
-  margin: 50px auto;
+  margin: 30px auto;
   line-height: 1.3;
   text-decoration: none;
   color: #ffffff;
@@ -187,10 +135,12 @@ body {
   border: solid 1px;
   border-radius: 10px;
   box-shadow: inset 0 0 10px #ffffff;
-  width: 60%;
+  width: 350px
+  
+  ;
 }
 
-.esbocos:hover {
+.links-homepage:hover {
   background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
   box-shadow: inset 0 0 10px #5b3c88;
   color: #5b3c88;
@@ -198,91 +148,20 @@ body {
 
 /*-------------------------*/
 
-/*Meun Referencia*/
+/*Contato*/
 
-.menu-referencia {
-  z-index: 9998;
-  display: block;
-  width: 40%;
-  height: 100%;
-  position: fixed;
-  top: 0;
-  right: -900px;
-  background-color: #d8d8d8;
-  text-align: left;
-  padding: 10px;
-  transition: right 0.8s;
-  line-height: 1.4;
-  background-image: linear-gradient(180deg, #d8d8d8, #bda8e0);
-  overflow-y: scroll;
-}
-
-.botao-voltar {
-  width: 30px;
-  cursor: pointer;
-  bottom: 20px;
-  right: -100px;
-  position: fixed;
-  transition: ri 0.8s;
-}
-
-.referencia {
-  margin: 20px auto 50px;
-  padding: 5px;
-  display: none;
-}
-
-.titulo-referencia {
-  font-weight: bold;
-  font-size: 1.2em;
-  color: #5b3c88;
-  padding: 10px 0;
-  border-bottom: solid 5px;
+.contato {
+  width: 100%;
+  margin: 0 auto;
   text-align: center;
 }
 
-.paragrafo-referencia {
-  font-style: italic;
-  font-weight: bold;
-  margin: 10px;
+.paragrafo-contato {
+  margin-bottom: 5px;
 }
 
-.destaque-referencia {
-  font-weight: bold;
-  font-size: 1.1em;
-  color: #5b3c88;
-  margin-right: 5px;
-}
-
-/*-------------------------*/
-
-/*Cronometro*/
-
-.cronometro {
-  z-index: 9999;
-  background-color: #bda8e0;
-  border-radius: 10px;
-  text-align: right;
-  padding: 10px;
-  display: block;
-  position: fixed;
-  bottom: 10px;
-  right: 20px;
-  font-weight: bold;
-  width: 100px;
-  color: #5b3c88;
-  text-align: center;
-  font-size: 16px;
-}
-.cronometro button {
-  background-color: #5b3c88;
-  color: #d8d8d8;
-  font-weight: bold;
-  padding: 1px 0 0 0;
-}
-
-.controle-cronometro {
-  width: 20px;
+.logo-contato {
+  width: 50px;
 }
 
 /*-------------------------*/
@@ -301,6 +180,10 @@ body {
   .principal {
     margin-top: 130px;
   }
+
+  .links-homepage {
+    width: 80%;
+  }
 }
 
 /*Acessando pelo celular*/
@@ -308,14 +191,6 @@ body {
 @media screen and (max-width: 480px) {
   .principal {
     margin-top: 170px;
-  }
-
-  .gravuras {
-    width: 150px;
-  }
-
-  .menu-referencia {
-    width: 40%;
   }
 }
 
