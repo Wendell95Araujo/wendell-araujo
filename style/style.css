@@ -203,6 +203,84 @@ body {
 
 /*-------------------------*/
 
+/*icones sociais*/
+
+#icons {
+  width: 220px;
+  height: auto;
+  position: fixed;
+  top: 30%;
+  left: -175px;
+}
+
+#icons ul {
+  list-style: none;
+}
+
+#icons ul li {
+  display: block;
+  background: #131313;
+  padding: 10px;
+  height: 30px;
+  position: relative;
+  transition: all 0.5s ease;
+  align-items: center;
+}
+
+#icons ul li a {
+  display: block;
+  color: #fff;
+  text-decoration: none;
+  padding-top: 8px;
+}
+
+#icons ul li:nth-child(1) {
+  background: #ff0000;
+}
+
+#icons ul li:nth-child(2) {
+  background: #1c1f1d;
+}
+
+#icons ul li:nth-child(3) {
+  background: #030379;
+}
+
+#icons ul li:nth-child(4) {
+  background: #11aeef;
+}
+
+#icons ul li:nth-child(5) {
+  background: #2626e7;
+  padding-right: 25px;
+}
+
+#icons ul li:nth-child(6) {
+  background: #ff00ff;
+}
+
+#icons ul li span {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  display: block;
+  right: 0;
+  padding: 10px;
+  font-size: 30px;
+  width: 30px;
+  text-align: center;
+}
+
+#icons ul li:hover {
+  cursor: pointer;
+  background: #131313;
+  opacity: 0.8;
+  border-left: 10px solid rgb(172, 165, 165);
+  transform: translateX(175px);
+}
+
+/*-------------------------*/
+
 /*Rodapé*/
 
 .caixa-footer {
