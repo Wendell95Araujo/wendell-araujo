@@ -321,7 +321,8 @@ body {
     margin-top: 130px;
   }
 
-  .paragrafo-container {
+  .paragrafo-container,
+  .contato {
     width: 90%;
   }
 }
@@ -333,8 +334,12 @@ body {
     margin-top: 170px;
   }
 
+  .paragrafo-container {
+    width: 80%;
+  }
+
   .tooltip {
-    width: 100%;
+    width: 90%;
   }
 
   .links-homepage {
