@@ -1,0 +1,300 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Montserrat', sans-serif;
+    color: #e0e0e0;
+    background: url('../img/background.webp') no-repeat center center fixed;
+    background-size: cover;
+    overflow: hidden;
+    width: 100%;
+}
+
+.menu {
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu a {
+    font-size: 20px;
+}
+
+.dashboard {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+    gap: 20px;
+    width: 100%;
+    height: 95vh; /* Ocupa quase toda a altura da tela */
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.8);
+    box-shadow: 0px 0px 20px rgba(0, 255, 255, 0.1);
+    overflow-y: auto; /* Habilita a rolagem vertical em telas menores */
+}
+
+.panel {
+    background: rgba(255, 255, 255, .1);
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid rgba(77, 184, 255, 0.3);
+    box-shadow: 0px 0px 15px rgba(77, 184, 255, 0.5);
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.panel:not(.header):hover {
+    transform: translateY(-5px);
+}
+
+.header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    text-align: center;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 0;
+    background: rgb(10, 10, 10);
+    border: none;
+    border-bottom: 2px solid rgba(77, 184, 255, 0.5);
+    z-index: 1;
+}
+
+.header h1 {
+    font-size: 1em;
+    color: #4db8ff;
+}
+
+.header nav a {
+    margin: 0 15px;
+    color: #e0e0e0;
+    text-decoration: none;
+    font-size: 1em;
+    transition: color 0.3s ease;
+}
+
+.header nav a:hover {
+    color: #4db8ff;
+}
+
+.projects {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.panel h2 {
+    font-size: 1.8em;
+    color: #4db8ff;
+    margin-bottom: 10px;
+}
+
+.panel p {
+    font-size: 1em;
+    color: #e0e0e0;
+    line-height: 1.5;
+}
+
+.panel a {
+    color: #4db8ff;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.panel a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos adicionais para a seção Sobre Mim */
+.about-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.profile-photo-container {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px solid #4db8ff;
+    box-shadow: 0px 0px 10px rgba(77, 184, 255, 0.5);
+    overflow: hidden;
+}
+
+.profile-photo {
+    width: 100%;
+}
+
+.about-content p {
+    flex: 1;
+    font-size: 1em;
+    color: #e0e0e0;
+}
+
+/* Estilo dos ícones de redes sociais */
+.social-links {
+    display: flex;
+    gap: 20px;
+    justify-content: flex-start;
+    margin-top: 10px;
+}
+
+.social-icon {
+    font-size: 1em; /* Tamanho dos ícones */
+    transition: color 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.social-icon:hover {
+    color: #e0e0e0; /* Cor ao passar o mouse */
+    text-decoration: none !important;
+}
+
+.social-icon i {
+    font-size: 2em;
+}
+
+.projects-button-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.project-button {
+    padding: 10px 20px;
+    width: 45%;
+    height: 50px;
+    background-color: #00406b;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.project-button:hover {
+    opacity: 0.8;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #fff;
+    color: #333;
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 500px;
+    text-align: center;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+    margin: 25px auto 15px;
+    border-radius: 10px;
+}
+
+.modal-buttons {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button {
+    padding: 10px 20px;
+    background-color: #4db8ff;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+    color: #4db8ff;
+}
+
+.close {
+    position: absolute;
+    top: -10px;
+    right: 0;
+    font-size: 50px;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    border-radius: 50%;
+    padding: 2px;
+    width: 40px;
+    height: 40px;
+}
+
+.close:hover {
+    opacity: 0.8;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+/* Layout para diferentes tamanhos de tela */
+@media (min-width: 768px) {
+    /* .dashboard {
+        display: grid;
+        grid-template-areas: 
+            "header header"
+            "about about"
+            "skills projects"
+            "contact projects";
+        grid-gap: 20px;
+    } */
+}
+
+@media (max-width: 767px) {
+    body, html {
+        display: block;
+    }
+
+    .dashboard {
+        width: 100%;
+        border-radius: 0;
+        min-height: 100vh;
+    }
+
+    .project-button {
+        width: 80%;
+    }
+
+    .social-links {
+        flex-wrap: wrap;
+    }
+
+    .social-icon {
+        width: 45%;
+    }
+}
